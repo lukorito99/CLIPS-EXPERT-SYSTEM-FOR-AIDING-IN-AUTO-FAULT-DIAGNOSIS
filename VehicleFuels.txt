@@ -1,0 +1,39 @@
+﻿
+
+(deffunction FuelTraits
+()
+
+(printout vf crlf
+             "Fuel Appearance:"crlf
+             "    DIESEL: brown-with-green-tint,yellowish-green."crlf
+                  crlf
+             "    PETROL: brownish-red,yellow-tint."crlf
+                  crlf
+             "    BIO-FUEL: amber,clear."
+                  crlf
+             "Fuel Smell:"crlf
+             "    DIESEL: strong-lingering-odour."crlf
+                  crlf
+             "    PETROL: strong-odour."crlf
+                  crlf
+             "    BIO-FUEL: cooking-oil,burnt-popcorn."
+                  crlf
+             "Fuel Touch:"crlf
+             "    DIESEL: waxy,oily-feel."crlf
+                  crlf
+             "    PETROL: cold."crlf
+                  crlf
+             "    BIO-FUEL: slippery."
+                  crlf 
+            
+
+             "Fuels are very dangerous and potentially explosive."crlf 
+             "Call a mechanic if you find a fuel leak in your car."crlf
+             "Please follow local regulations when intending to dispose fuel."crlf
+             
+
+)
+)
+
+             
+

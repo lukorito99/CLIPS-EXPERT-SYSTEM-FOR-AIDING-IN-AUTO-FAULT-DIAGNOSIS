@@ -1,0 +1,660 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A025FD5C-93A6-42A5-882C-5E1B5D281810}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AutoGarage</RootNamespace>
+    <AssemblyName>AutoGarage</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0FD0F70499491A4A6BA1E1A4C5496CBA815168A6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AutoGarage_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>AutoGarage.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CLIPSCLRWrapper">
+      <HintPath>bin\CLIPSCLRWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="airconditioning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="airconditioning.Designer.cs">
+      <DependentUpon>airconditioning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrakeSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrakeSystem.Designer.cs">
+      <DependentUpon>BrakeSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrakeSystemMaintain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrakeSystemMaintain.Designer.cs">
+      <DependentUpon>BrakeSystemMaintain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car Fluids.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Car Fluids.Designer.cs">
+      <DependentUpon>Car Fluids.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoolingSystemDiagnosis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoolingSystemDiagnosis.Designer.cs">
+      <DependentUpon>CoolingSystemDiagnosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="decision window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="decision window.Designer.cs">
+      <DependentUpon>decision window.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiagnosisArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiagnosisArea.Designer.cs">
+      <DependentUpon>DiagnosisArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driver Basics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driver Basics.Designer.cs">
+      <DependentUpon>Driver Basics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DriveTrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DriveTrain.Designer.cs">
+      <DependentUpon>DriveTrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine Maintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine Maintenance.designer.cs">
+      <DependentUpon>Engine Maintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExhaustSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExhaustSystem.Designer.cs">
+      <DependentUpon>ExhaustSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuelSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuelSystem.Designer.cs">
+      <DependentUpon>FuelSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuelSystemMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuelSystemMaintenance.Designer.cs">
+      <DependentUpon>FuelSystemMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ignition Maintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ignition Maintenance.Designer.cs">
+      <DependentUpon>Ignition Maintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SecondFuelSystemDiagnosis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecondFuelSystemDiagnosis.Designer.cs">
+      <DependentUpon>SecondFuelSystemDiagnosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="The Engine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="The Engine.Designer.cs">
+      <DependentUpon>The Engine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="The Ignition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="The Ignition.Designer.cs">
+      <DependentUpon>The Ignition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transmision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transmision.Designer.cs">
+      <DependentUpon>Transmision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleFuels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleFuels.Designer.cs">
+      <DependentUpon>VehicleFuels.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="airconditioning.resx">
+      <DependentUpon>airconditioning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrakeSystem.resx">
+      <DependentUpon>BrakeSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrakeSystemMaintain.resx">
+      <DependentUpon>BrakeSystemMaintain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Car Fluids.resx">
+      <DependentUpon>Car Fluids.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoolingSystemDiagnosis.resx">
+      <DependentUpon>CoolingSystemDiagnosis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="decision window.resx">
+      <DependentUpon>decision window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiagnosisArea.resx">
+      <DependentUpon>DiagnosisArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driver Basics.resx">
+      <DependentUpon>Driver Basics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DriveTrain.resx">
+      <DependentUpon>DriveTrain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine Maintenance.resx">
+      <DependentUpon>Engine Maintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExhaustSystem.resx">
+      <DependentUpon>ExhaustSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuelSystem.resx">
+      <DependentUpon>FuelSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuelSystemMaintenance.resx">
+      <DependentUpon>FuelSystemMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ignition Maintenance.resx">
+      <DependentUpon>Ignition Maintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="auto.clp" />
+    <EmbeddedResource Include="AirConditioning.clp" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecondFuelSystemDiagnosis.resx">
+      <DependentUpon>SecondFuelSystemDiagnosis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="The Engine.resx">
+      <DependentUpon>The Engine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="The Ignition.resx">
+      <DependentUpon>The Ignition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transmision.resx">
+      <DependentUpon>Transmision.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AutoGarage_TemporaryKey.pfx" />
+    <EmbeddedResource Include="cooling.clp" />
+    <EmbeddedResource Include="driverbasics.clp" />
+    <EmbeddedResource Include="drivetrain.clp" />
+    <EmbeddedResource Include="engine.clp" />
+    <EmbeddedResource Include="ignition.clp" />
+    <EmbeddedResource Include="exhaust.clp" />
+    <EmbeddedResource Include="Fuel.clp" />
+    <EmbeddedResource Include="Brake.clp" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\brakepad1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\speedgauge1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\speedgauge2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\brakepad2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\carexhaust1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\speedgauge3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\BMWPowerTrain.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\radiator2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audidrivetrain.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\automain.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\automatictransmission.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brakepad3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carac1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carac2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carexhaust2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carexhaust3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carexhaust5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carexhaust4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carradiator1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\discbrake2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engine2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\evtransmission.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\discbrake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engine3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sparkplug2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sparkpug1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ignition2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ignition3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\piston2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\piston1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\piston3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\piston4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fuel4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car-ignition.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fuel2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VioletsLetter.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VehicleFuels.resx">
+      <DependentUpon>VehicleFuels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VioletsLetter.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VioletAlwaysWatchingOverYou.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Violet Evergarden Always Watching Over You.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fillingstation.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Violet  Evergarden A Place to Call Home.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Violet Evergarden AlwaysWatchingOverYou.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\amgside.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anti-Lock-Brakes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BenzCLSTransmission.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bmwdrivetrain.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brakefluid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brakepad4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carac3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carexhaust6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car-Fluid1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarFluids.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coolant.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coolingsystem1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engine1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enginediag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FluidType.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fuel1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fuel3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gearstick1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gearstick2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gearstick3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gearstick4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gearstick5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gearstick6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gearstick7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gearstick8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gearstick9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gearstick10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gearstick11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ignition1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ignition4.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shell.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sparkplug3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transmission-Fluid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VehicleFluid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enginex.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2012-Chevrolet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filling-machine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="driverbasicsoutput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="carfluids.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="fuels.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diesel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fuelconsumption.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FuelEfficient.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FuelGauge.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fueltypes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PumpingGas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rpm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VolkFuel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VehicleFuels.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="acoutput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="boutput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="coolingoutput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="drivetrainouput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ignitionouput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="engineoutput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="exhaustoutput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="fueloutput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
